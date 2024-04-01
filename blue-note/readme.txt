@@ -12,7 +12,7 @@ Blue Note is an elegant and fun block theme inspired by jazz and the record labe
 == Changelog ==
 
 = 1.0.2 =
-* Replaced get_stylesheet_directory_uri() with get_template_directory_uri() 
+* Replaced get_stylesheet_directory_uri() with get_template_directory_uri() to ensure child themes work correctly
 
 = 1.0.1 =
 * Updated screenshot file
