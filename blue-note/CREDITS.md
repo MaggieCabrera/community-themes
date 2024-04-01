@@ -19,3 +19,4 @@
 - [jeryj](https://github.com/jeryj)
 - [getdave](https://github.com/getdave)
 - [draganescu](https://github.com/draganescu)
+- [shail-mehta](https://github.com/shail-mehta)
