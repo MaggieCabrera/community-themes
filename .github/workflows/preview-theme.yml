@@ -34,7 +34,7 @@ jobs:
           if [[ ${#unique_dirs[@]} -eq 0 ]]; then
               echo "No theme changes detected"
               echo "HAS_THEME_CHANGES=false" >> $GITHUB_OUTPUT
-              exit 78 # Use neutral exit code
+              exit 0 # Use exit code 0 for successful completion
           fi
           # Output list of theme slugs with changes
           echo "HAS_THEME_CHANGES=true" >> $GITHUB_OUTPUT
