@@ -68,9 +68,12 @@ async function createPreviewLinksComment(github, context, changedThemeSlugs) {
 I've detected changes to the following themes in this PR: ${changedThemes
 		.map((themeSlug) => getThemeName(themeSlug))
 		.join(', ')}.
+
 You can preview these changes by following the links below:
 ${previewLinks}
+
 I will update this comment with the latest preview links as you push more changes to this PR.
+
 **⚠️ Note:** The preview sites are created using [WordPress Playground](https://wordpress.org/playground/). You can add content, edit settings, and test the themes as you would on a real site, but please note that changes are not saved between sessions.
 `;
 
