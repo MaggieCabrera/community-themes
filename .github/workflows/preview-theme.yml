@@ -39,7 +39,7 @@ jobs:
           # Output list of theme slugs with changes
           echo "HAS_THEME_CHANGES=true" >> $GITHUB_OUTPUT
           echo "CHANGED_THEMES=$(echo ${unique_dirs[@]})" >> $GITHUB_ENV
-          echo "Theme directories with changes: $CHANGED_THEME_DIRS"
+          echo "Theme directories with changes: $CHANGED_THEMES"
       - name: Add Preview Links comment
         id: comment-on-pr
         if: ${{ steps.check-for-changes.outputs.HAS_THEME_CHANGES == 'true' }}
