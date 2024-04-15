@@ -20,13 +20,15 @@ jobs:
           # Loop through changed files and identify parent directories
           declare -A unique_dirs
           for file in $changed_files; do
-              dir_name=$(dirname "$file")
-              echo $dir_name
-              if [[ -f "$dir_name/style.css" ]]; then  # Check if the directory contains a theme
-                  # save only the basename
-                  unique_dirs[$dir_name]=$(basename $dir_name)
-                  echo $unique_dirs
+            dir_name=$(dirname "$file")
+            while [[ "$dir_name" != "." ]]; do
+              if [[ -f "$dir_name/style.css" ]]; then  # Check if the parent directory contains a theme
+                # Save only the basename
+                unique_dirs[$dir_name]=$(basename $dir_name)
+                break
               fi
+              dir_name=$(dirname "$dir_name")
+            done
           done
           # Check if themes have changed
           if [[ ${#unique_dirs[@]} -eq 0 ]]; then
