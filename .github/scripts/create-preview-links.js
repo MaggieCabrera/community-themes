@@ -19,7 +19,7 @@ function createBlueprint(themeSlug, branch) {
 				step: 'installTheme',
 				themeZipFile: {
 					resource: 'url',
-					url: `https://github-proxy.com/partial/Wordpress/community-themes/${themeSlug}?branch=${branch}`,
+					url: `https://github-proxy.com/proxy.php?action=partial&repo=Wordpress/community-themes&directory=${themeSlug}&branch=${branch}`,
 				},
 			},
 			{
@@ -45,6 +45,27 @@ function getThemeName(themeSlug) {
 }
 
 /*
+ * This function reads the `style.css` file of a theme and returns the name of the parent theme.
+ * If the theme is not a child theme, it returns an empty string.
+ *
+ * @param {string} themeSlug - The slug of the theme to get the parent theme name of.
+ * @returns {string} - The name of the parent theme as defined in the `style.css` file.
+ */
+function getParentThemeName(themeSlug) {
+	const styleCss = fs.readFileSync(`${themeSlug}/style.css`, 'utf8');
+	const parentTheme = styleCss.match(/Template:(.*)/i);
+	const isChildTheme = parentTheme && '' !== parentTheme[1].trim();
+
+	if (!isChildTheme) {
+		return '';
+	}
+
+	return parentTheme && '' !== parentTheme[1].trim()
+		? parentTheme[1].trim()
+		: '';
+}
+
+/*
  * This function creates a comment on a PR with preview links for the changed themes.
  * It is used by `preview-theme` workflow.
  *
@@ -56,25 +77,40 @@ async function createPreviewLinksComment(github, context, changedThemeSlugs) {
 	const changedThemes = changedThemeSlugs.split(' ');
 	const previewLinks = changedThemes
 		.map((themeSlug) => {
+			const parentThemeName = getParentThemeName(themeSlug);
+			const note = parentThemeName
+				? ` (child theme of **${parentThemeName}**)`
+				: '';
+
 			return `- [Preview changes for **${getThemeName(
 				themeSlug
 			)}**](https://playground.wordpress.net/#${createBlueprint(
 				themeSlug,
 				context.payload.pull_request.head.ref
-			)})`;
+			)})${note}`;
 		})
 		.join('\n');
+
+	const includesChildThemes = changedThemes.some(
+		(themeSlug) => '' !== getParentThemeName(themeSlug)
+	);
+
 	const comment = `
 I've detected changes to the following themes in this PR: ${changedThemes
 		.map((themeSlug) => getThemeName(themeSlug))
 		.join(', ')}.
 
 You can preview these changes by following the links below:
+
 ${previewLinks}
 
 I will update this comment with the latest preview links as you push more changes to this PR.
-
 **⚠️ Note:** The preview sites are created using [WordPress Playground](https://wordpress.org/playground/). You can add content, edit settings, and test the themes as you would on a real site, but please note that changes are not saved between sessions.
+${
+	includesChildThemes
+		? '\n**⚠️ Note:** Child themes are dependent on their parent themes. You will have to install the parent theme as well for the preview to work correctly.'
+		: ''
+}
 `;
 
 	const repoData = {
