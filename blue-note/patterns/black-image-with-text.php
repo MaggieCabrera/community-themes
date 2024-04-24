@@ -5,6 +5,7 @@
  * Categories: text
  * Block Types: core/quote
  */
+//another test
 ?>
 <!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"0px","left":"0px"},"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"}}},"backgroundColor":"base"} -->
 <div class="wp-block-columns has-base-background-color has-background" style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px"><!-- wp:column {"verticalAlignment":"bottom"} -->
