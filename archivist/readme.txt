@@ -1,4 +1,4 @@
-=== Tardis ===
+=== Archivist ===
 Contributors: the WordPress team
 Requires at least: 6.0
 Tested up to: 6.5.2
