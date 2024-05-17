@@ -14,3 +14,8 @@ Template:
 Text Domain: poetry
 Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, rtl-language-support, theme-options, threaded-comments, translation-ready, wide-blocks
 */
+
+.header-small .header-small__container.wp-block-group {
+	align-items: baseline;
+	row-gap: 1rem;
+}
