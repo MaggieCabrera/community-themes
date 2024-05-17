@@ -83,34 +83,34 @@
 		"elements": {
 			"h1": {
 				"typography": {
-					"fontSize": "64px",
+					"fontSize": "4rem",
 					"fontStyle": "normal",
 					"fontWeight": "700"
 				}
 			},
 			"h2": {
 				"typography": {
-					"fontSize": "48px"
+					"fontSize": "3rem"
 				}
 			},
 			"h3": {
 				"typography": {
-					"fontSize": "38px"
+					"fontSize": "2.38rem"
 				}
 			},
 			"h4": {
 				"typography": {
-					"fontSize": "28px"
+					"fontSize": "1.75rem"
 				}
 			},
 			"h5": {
 				"typography": {
-					"fontSize": "22px"
+					"fontSize": "1.38rem"
 				}
 			},
 			"h6": {
 				"typography": {
-					"fontSize": "16px"
+					"fontSize": "1rem"
 				}
 			},
 			"heading": {
@@ -125,7 +125,7 @@
 			}
 		},
 		"spacing": {
-			"blockGap": "25px",
+			"blockGap": "1.56rem",
 			"padding": {
 				"bottom": "0px",
 				"left": "20px",
