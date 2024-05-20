@@ -22,7 +22,7 @@
 <figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/feather-small.png" alt="" width="56" height="56"/></figure>
 <!-- /wp:image -->
 
-<!-- wp:post-title {"style":{"spacing":{"padding":{"right":"24%"}}}} /-->
+<!-- wp:post-title {"isLink":true,"style":{"spacing":{"padding":{"right":"24%"}}}} /-->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"8px"},"elements":{"link":{"color":{"text":"var:preset|color|vivid-red"}}}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
 <div class="wp-block-group has-link-color"><!-- wp:paragraph {"textColor":"custom-contrast"} -->

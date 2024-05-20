@@ -9,7 +9,7 @@
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"32px","bottom":"64px"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group" style="padding-top:32px;padding-bottom:64px"><!-- wp:group {"style":{"spacing":{"blockGap":"64px"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
 <div class="wp-block-group"><!-- wp:group {"style":{"spacing":{"blockGap":"88px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
-<div class="wp-block-group"><!-- wp:site-title {"level":0,"isLink":false,"style":{"typography":{"fontStyle":"normal","fontWeight":"600"}},"fontSize":"medium"} /-->
+<div class="wp-block-group"><!-- wp:site-title {"level":0,"isLink":true,"style":{"typography":{"fontStyle":"normal","fontWeight":"600"}},"fontSize":"medium"} /-->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"48px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"lineHeight":"0.8"}},"fontSize":"xx-large","fontFamily":"rozha-one"} -->
