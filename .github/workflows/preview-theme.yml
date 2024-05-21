@@ -7,15 +7,18 @@ jobs:
   check-for-changes-to-themes:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout PR Head
         uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
 
       - name: Retrieved Theme Changes
         id: check-for-changes
         run: |
           # Retrieve list of all changed files
-          git fetch origin trunk:trunk
-          changed_files=$(git diff --name-only HEAD origin/trunk)
+          git fetch origin ${{ github.event.pull_request.base.ref }}:${{ github.event.pull_request.base.ref }}
+          changed_files=$(git diff --name-only HEAD origin/${{ github.event.pull_request.base.ref }})
           
           # Loop through changed files and identify parent directories
           declare -A unique_dirs
