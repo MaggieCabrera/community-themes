@@ -4,6 +4,7 @@
  * Slug: blue-note/black-image-text
  * Categories: text
  * Block Types: core/quote
+ * test
  */
 ?>
 <!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"0px","left":"0px"},"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"}}},"backgroundColor":"base"} -->
