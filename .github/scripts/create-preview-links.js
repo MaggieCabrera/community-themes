@@ -70,7 +70,7 @@ function createPlaygroundPreconfiguredLink(themeName = '', blueprint = '', exist
 	const searchParams = new URLSearchParams();
 
 	searchParams.set('storage', 'browser'); // We need to have the storage to be able to create/update the PR
-	searchParams.set('ghexport-repo-url', encodeURIComponent('https://github.com/WordPress/community-themes'));
+	searchParams.set('ghexport-repo-url', 'https://github.com/WordPress/community-themes');
 	searchParams.set('ghexport-content-type', 'theme');
 	searchParams.set('ghexport-theme', themeName);
 
