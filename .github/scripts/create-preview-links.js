@@ -65,7 +65,7 @@ function getParentThemeName(themeSlug) {
 		: '';
 }
 
-async function createPlaygroundPreconfiguredLink(themeName = '', blueprint = '', existingPr = false) {
+function createPlaygroundPreconfiguredLink(themeName = '', blueprint = '', existingPr = false) {
 	const url = new URL('https://playground.wordpress.net/');
 	const searchParams = new URLSearchParams();
 
