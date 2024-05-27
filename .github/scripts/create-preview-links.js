@@ -100,7 +100,7 @@ async function createPreviewLinksComment(github, context, changedThemeSlugs) {
 			const parentThemeName = getParentThemeName(themeSlug);
 			const themeName = getThemeName( themeSlug );
 			const blueprint = createBlueprint( themeSlug, context.payload.pull_request.head.ref );
-			const playgroundUrl = createPlaygroundPreconfiguredLink( themeName, blueprint, context.payload.pull_request.number );
+			const playgroundUrl = createPlaygroundPreconfiguredLink( themeSlug, blueprint, context.payload.pull_request.number );
 
 			const note = parentThemeName
 				? ` (child theme of **${parentThemeName}**)`
