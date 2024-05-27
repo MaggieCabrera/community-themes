@@ -66,7 +66,7 @@ function getParentThemeName(themeSlug) {
 }
 
 async function createPlaygroundPreconfiguredLink(themeName = '', blueprint = '', existingPr = false) {
-	const url = new URL('https://wordpress.org/playground/');
+	const url = new URL('https://playground.wordpress.net/');
 	const searchParams = new URLSearchParams();
 
 	searchParams.set('storage', 'browser'); // We need to have the storage to be able to create/update the PR
@@ -76,7 +76,7 @@ async function createPlaygroundPreconfiguredLink(themeName = '', blueprint = '',
 
 	if ( existingPr ) {
 		searchParams.set('ghexport-pr-action', 'update');
-		searchParams.set('ghexport-pr-number', existingPr); // It's not supported yet - see PR WordPress/wordpress-playground# TODO
+		searchParams.set('ghexport-pr-number', existingPr); // It's not supported yet - see PR WordPress/wordpress-playground#1465
 	}
 
 	url.search = searchParams.toString();
