@@ -76,7 +76,7 @@ function createPlaygroundPreconfiguredLink(themeName = '', blueprint = '', exist
 
 	if ( existingPr ) {
 		searchParams.set('ghexport-pr-action', 'update');
-		searchParams.set('ghexport-pr-number', existingPr); // It's not supported yet - see PR WordPress/wordpress-playground#1465
+		searchParams.set('ghexport-pr-number', existingPr); // See: WordPress/wordpress-playground#1465
 	}
 
 	url.search = searchParams.toString();
