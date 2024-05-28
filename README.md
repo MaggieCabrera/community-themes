@@ -12,15 +12,30 @@ The aim of this repo is to submit the block themes to the WordPress.org themes d
 
 To get started with development you have a couple of options. You can set up a local environment or you can use the new [WordPress Playground](https://developer.wordpress.org/playground/) and build your theme online without needing to install anything at all on your machine.
 
-**If you prefer to use the Playground:**
+#### If you prefer to use the Playground:
+
+> Warning: The Playground has a few limitations and you won't be able to add new fonts to your theme using it.
+
+##### Option #1 (manual):
 
 1. Visit the [Playground](https://playground.wordpress.net/?theme=twentytwentythree&plugin=gutenberg&plugin=create-block-theme&url=/wp-admin/index.php). This instance has the Create Block Theme plugin installed.
 1. Go to Appearance/Site Editor and build your theme!
 1. Export it using the Create Block Theme plugin under Appearance/Create Block Theme
 
-The Playground has a few limitations and you won't be able to add new fonts to your theme using it.
+##### Option #2 (direct link):
 
-**If you want to work locally:**
+You can boot up the Playground with the selected theme by clicking one of the links below:
+
+- [Poetry](https://playground.wordpress.net/?storage=browser&ghexport-repo-url=https://github.com/WordPress/community-themes&ghexport-content-type=theme&ghexport-theme=poetry#%7B%22steps%22:%5B%7B%22step%22:%22login%22,%22username%22:%22admin%22,%22password%22:%22password%22%7D,%7B%22step%22:%22installTheme%22,%22themeZipFile%22:%7B%22resource%22:%22url%22,%22url%22:%22https://github-proxy.com/proxy.php?action=partial&repo=Wordpress/community-themes&directory=poetry&branch=trunk%22%7D%7D,%7B%22step%22:%22activateTheme%22,%22themeFolderName%22:%22poetry%22%7D%5D%7D)
+- [Archivist](https://playground.wordpress.net/?storage=browser&ghexport-repo-url=https://github.com/WordPress/community-themes&ghexport-content-type=theme&ghexport-theme=archivist#%7B%22steps%22:%5B%7B%22step%22:%22login%22,%22username%22:%22admin%22,%22password%22:%22password%22%7D,%7B%22step%22:%22installTheme%22,%22themeZipFile%22:%7B%22resource%22:%22url%22,%22url%22:%22https://github-proxy.com/proxy.php?action=partial&repo=Wordpress/community-themes&directory=archivist&branch=trunk%22%7D%7D,%7B%22step%22:%22activateTheme%22,%22themeFolderName%22:%22archivist%22%7D%5D%7D)
+- [Atlas](https://playground.wordpress.net/?storage=browser&ghexport-repo-url=https://github.com/WordPress/community-themes&ghexport-content-type=theme&ghexport-theme=atlas#%7B%22steps%22:%5B%7B%22step%22:%22login%22,%22username%22:%22admin%22,%22password%22:%22password%22%7D,%7B%22step%22:%22installTheme%22,%22themeZipFile%22:%7B%22resource%22:%22url%22,%22url%22:%22https://github-proxy.com/proxy.php?action=partial&repo=Wordpress/community-themes&directory=atlas&branch=trunk%22%7D%7D,%7B%22step%22:%22activateTheme%22,%22themeFolderName%22:%22atlas%22%7D%5D%7D)
+- [Blue Note](https://playground.wordpress.net/?storage=browser&ghexport-repo-url=https://github.com/WordPress/community-themes&ghexport-content-type=theme&ghexport-theme=blue-note#%7B%22steps%22:%5B%7B%22step%22:%22login%22,%22username%22:%22admin%22,%22password%22:%22password%22%7D,%7B%22step%22:%22installTheme%22,%22themeZipFile%22:%7B%22resource%22:%22url%22,%22url%22:%22https://github-proxy.com/proxy.php?action=partial&repo=Wordpress/community-themes&directory=blue-note&branch=trunk%22%7D%7D,%7B%22step%22:%22activateTheme%22,%22themeFolderName%22:%22blue-note%22%7D%5D%7D)
+- [Purr](https://playground.wordpress.net/?storage=browser&ghexport-repo-url=https://github.com/WordPress/community-themes&ghexport-content-type=theme&ghexport-theme=purr#%7B%22steps%22:%5B%7B%22step%22:%22login%22,%22username%22:%22admin%22,%22password%22:%22password%22%7D,%7B%22step%22:%22installTheme%22,%22themeZipFile%22:%7B%22resource%22:%22url%22,%22url%22:%22https://github-proxy.com/proxy.php?action=partial&repo=Wordpress/community-themes&directory=purr&branch=trunk%22%7D%7D,%7B%22step%22:%22activateTheme%22,%22themeFolderName%22:%22purr%22%7D%5D%7D)
+- [Stacks](https://playground.wordpress.net/?storage=browser&ghexport-repo-url=https://github.com/WordPress/community-themes&ghexport-content-type=theme&ghexport-theme=stacks#%7B%22steps%22:%5B%7B%22step%22:%22login%22,%22username%22:%22admin%22,%22password%22:%22password%22%7D,%7B%22step%22:%22installTheme%22,%22themeZipFile%22:%7B%22resource%22:%22url%22,%22url%22:%22https://github-proxy.com/proxy.php?action=partial&repo=Wordpress/community-themes&directory=stacks&branch=trunk%22%7D%7D,%7B%22step%22:%22activateTheme%22,%22themeFolderName%22:%22stacks%22%7D%5D%7D)
+- [Term](https://playground.wordpress.net/?storage=browser&ghexport-repo-url=https://github.com/WordPress/community-themes&ghexport-content-type=theme&ghexport-theme=term#%7B%22steps%22:%5B%7B%22step%22:%22login%22,%22username%22:%22admin%22,%22password%22:%22password%22%7D,%7B%22step%22:%22installTheme%22,%22themeZipFile%22:%7B%22resource%22:%22url%22,%22url%22:%22https://github-proxy.com/proxy.php?action=partial&repo=Wordpress/community-themes&directory=term&branch=trunk%22%7D%7D,%7B%22step%22:%22activateTheme%22,%22themeFolderName%22:%22term%22%7D%5D%7D)
+- [TT1 Blocks](https://playground.wordpress.net/?storage=browser&ghexport-repo-url=https://github.com/WordPress/community-themes&ghexport-content-type=theme&ghexport-theme=tt1-blocks#%7B%22steps%22:%5B%7B%22step%22:%22login%22,%22username%22:%22admin%22,%22password%22:%22password%22%7D,%7B%22step%22:%22installTheme%22,%22themeZipFile%22:%7B%22resource%22:%22url%22,%22url%22:%22https://github-proxy.com/proxy.php?action=partial&repo=Wordpress/community-themes&directory=tt1-blocks&branch=trunk%22%7D%7D,%7B%22step%22:%22activateTheme%22,%22themeFolderName%22:%22tt1-blocks%22%7D%5D%7D)
+
+#### If you want to work locally:
 
 1. Set up a WordPress instance, here is a [handy guide to install WordPress locally](https://wordpress.org/support/article/installing-wordpress-on-your-own-computer/)
 2. Clone / download this repository into your `/wp-content/themes/` directory
