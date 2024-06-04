@@ -19,8 +19,8 @@
 <!-- wp:column {"style":{"border":{"width":"2px"}}} -->
 <div class="wp-block-column" style="border-width:2px">
 
-<!-- wp:cover {"url":"http://wp-dev.test/wp-content/themes/community/term/assets/images/Joel_Gavins.jpg","dimRatio":0,"minHeight":100,"minHeightUnit":"%","isDark":false} -->
-<div class="wp-block-cover is-light" style="min-height:100%"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><img class="wp-block-cover__image-background" alt="" src="http://wp-dev.test/wp-content/themes/community/term/assets/images/Joel_Gavins.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","fontSize":"large"} -->
+<!-- wp:cover {"url":"http://wp-dev.test/wp-content/themes/community/term/assets/images/Joel_Gavins.jpg","dimRatio":0,"minHeight":100,"minHeightUnit":"%","isDark":false,"style":{"border":{"radius":"4px"}}} -->
+<div class="wp-block-cover is-light" style="border-radius:4px;min-height:100%"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><img class="wp-block-cover__image-background" alt="" src="http://wp-dev.test/wp-content/themes/community/term/assets/images/Joel_Gavins.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","fontSize":"large"} -->
 <p class="has-text-align-center has-large-font-size"></p>
 <!-- /wp:paragraph --></div></div>
 <!-- /wp:cover -->
