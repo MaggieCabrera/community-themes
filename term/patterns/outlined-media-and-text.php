@@ -5,7 +5,10 @@
  * Categories: media, text
  */
 ?>
-<!-- wp:columns {"metadata":{"categories":["media","text"],"patternName":"term/outlined-media-text","name":"Outlined Media and Text"},"align":"wide","style":{"border":{"width":"2px","radius":"8px"},"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"},"margin":{"top":"0","bottom":"0"},"blockGap":{"top":"0","left":"0px"}}},"backgroundColor":"black"} -->
+<!-- wp:group {"metadata":{"categories":["media","text"],"patternName":"term/outlined-media-text","name":"Outlined Media and Text"},"align":"wide","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignwide">
+
+<!-- wp:columns {"align":"wide","style":{"border":{"width":"2px","radius":"8px"},"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"},"margin":{"top":"0","bottom":"0"},"blockGap":{"top":"0","left":"0px"}}},"backgroundColor":"black"} -->
 <div class="wp-block-columns alignwide has-black-background-color has-background" style="border-width:2px;border-radius:8px;margin-top:0;margin-bottom:0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:column {"style":{"spacing":{"padding":{"bottom":"2px","top":"2px","right":"2px","left":"2px"},"blockGap":"0"}},"backgroundColor":"custom-black","layout":{"type":"default"}} -->
 <div class="wp-block-column has-custom-black-background-color has-background" style="padding-top:2px;padding-right:2px;padding-bottom:2px;padding-left:2px"><!-- wp:group {"style":{"border":{"radius":"4px"}},"backgroundColor":"custom-beige","layout":{"type":"flex","orientation":"vertical"}} -->
 <div class="wp-block-group has-custom-beige-background-color has-background" style="border-radius:4px"><!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60","left":"var:preset|spacing|60","right":"var:preset|spacing|60"},"padding":{"top":"0","bottom":"0","left":"0","right":"0"}}}} -->
@@ -22,3 +25,6 @@
 <!-- /wp:cover --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
+
+</div>
+<!-- /wp:group -->
