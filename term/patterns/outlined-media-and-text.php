@@ -2,8 +2,7 @@
 /**
  * Title: Outlined Media and Text
  * Slug: term/outlined-media-text
- * Categories: media
- * Block Types: core/media
+ * Categories: media, text
  */
 ?>
 <!-- wp:columns {"style":{"border":{"width":"2px","radius":"8px"},"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"},"margin":{"top":"0","bottom":"0"},"blockGap":{"top":"0","left":"0px"}}},"backgroundColor":"black"} -->
