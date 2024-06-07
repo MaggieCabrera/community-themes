@@ -12,6 +12,7 @@ The aim of this repo is to submit the block themes to the WordPress.org themes d
 
 To get started with development you have a couple of options. You can set up a local environment or you can use the new [WordPress Playground](https://developer.wordpress.org/playground/) and build your theme online without needing to install anything at all on your machine.
 
+
 #### If you prefer to use the Playground:
 
 > Warning: The Playground has a few limitations and you won't be able to add new fonts to your theme using it.
@@ -51,6 +52,29 @@ If it's your first time building a Block Theme, we suggest checking the Resource
 - PHP 5.6+
 - License: [GPLv2](http://www.gnu.org/licenses/gpl-2.0.html) or later
 
+#### For New Contributors
+##### Using GUI Tools for Git
+If you are not comfortable with the command line, you can use GUI tools to handle Git operations. Here are some example tools:
+
+- [Visual Studio Code](https://code.visualstudio.com/): Editor with integrated source control with Git support.  
+- [GitKraken](https://www.gitkraken.com/): A powerful Git GUI client for Windows, MacOS, and Linux - Free for use with Public Repos, like this one!
+- [GitHub Desktop](https://desktop.github.com/): A simple and easy-to-use Git client for Windows and MacOS. 
+These tools provide a visual interface for Git operations, making it easier to manage branches, commits, and pull requests.
+
+##### Setting up for your first commit
+1. **Create a New Branch**: Before you start working on any changes, create a new branch from the main branch. This helps keep your work organized and makes it easier to manage changes.
+   ```bash
+   git checkout -b your-branch-name
+
+2. **Work on the Branch**: Make your changes and commit them to your branch.
+```bash
+git add .
+git commit -m "Your commit message"
+```
+3. **Create a Pull Request (PR)**: Once you have completed your work, push your branch to the repository and create a pull request.
+```bash
+git push origin your-branch-name
+```
 ### How to contribute a new theme
 
 You can contribute with code, designs or discussion.
