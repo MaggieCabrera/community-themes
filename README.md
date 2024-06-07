@@ -62,6 +62,8 @@ If you are not comfortable with the command line, you can use GUI tools to handl
 These tools provide a visual interface for Git operations, making it easier to manage branches, commits, and pull requests.
 
 ##### Setting up for your first commit
+0. **Checking Where You Pulled The Repo To** Before we get started, make sure that if you are working locally, you have cloned the wordpress/community-themes repo to your site's themes folder. For example if you are using Local, this might look like User/Local Sites/theme-plugin-dev/app/public/wp-content/themes
+
 1. **Create a New Branch**: Before you start working on any changes, create a new branch from the main branch. This helps keep your work organized and makes it easier to manage changes.
    ```bash
    git checkout -b your-branch-name
