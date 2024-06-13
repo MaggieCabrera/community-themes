@@ -130,7 +130,7 @@
 		"typography": {
 			"fontFamily": "var(--wp--preset--font-family--system-font)",
 			"fontSize": "var(--wp--preset--font-size--medium)",
-			"lineHeight": "1.5",
+			"lineHeight": "1.5"
 		}
 	},
 	"templateParts": [
