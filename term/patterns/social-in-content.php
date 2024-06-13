@@ -2,17 +2,17 @@
 /**
  * Title: Social in content
  * Slug: term/social-in-content
- * Categories: text
- * Block Types: core/social-links
+ * Categories: text, call-to-action
  */
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group" style="padding-top:0;padding-bottom:0"><!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"0","left":"var:preset|spacing|60"},"margin":{"top":"0","bottom":"0"}}}} -->
 <div class="wp-block-columns" style="margin-top:0;margin-bottom:0"><!-- wp:column {"width":"50px"} -->
-<div class="wp-block-column" style="flex-basis:50px"><!-- wp:social-links {"iconColor":"custom-beige","iconColorValue":"#edece8","iconBackgroundColorValue":"#000","style":{"spacing":{"padding":{"top":"0","bottom":"0"},"margin":{"top":"0","bottom":"0"},"blockGap":{"top":"var:preset|spacing|40"}}},"className":"is-style-social-rounded-icons","layout":{"type":"flex","orientation":"vertical","justifyContent":"center","flexWrap":"nowrap"}} -->
-<ul class="wp-block-social-links has-icon-color has-icon-background-color is-style-social-rounded-icons" style="margin-top:0;margin-bottom:0;padding-top:0;padding-bottom:0"><!-- wp:social-link {"url":"#","service":"facebook","label":""} /-->
+<div class="wp-block-column" style="flex-basis:50px"><!-- wp:social-links {"iconColor":"custom-beige","iconColorValue":"var(--wp--preset--color--custom-beige)","iconBackgroundColor":"custom-black","iconBackgroundColorValue":"var(--wp--preset--color--black)","style":{"spacing":{"padding":{"top":"0","bottom":"0"},"margin":{"top":"0","bottom":"0"},"blockGap":{"top":"var:preset|spacing|40"}}},"className":"is-style-social-rounded-icons is-style-default","layout":{"type":"flex","orientation":"vertical","justifyContent":"center","flexWrap":"nowrap"}} -->
+<ul class="wp-block-social-links has-icon-color has-icon-background-color is-style-social-rounded-icons is-style-default" style="margin-top:0;margin-bottom:0;padding-top:0;padding-bottom:0"><!-- wp:social-link {"url":"#","service":"facebook","label":"Facebook"} /-->
 
-<!-- wp:social-link {"url":"#","service":"instagram"} /-->
+<!-- wp:social-link {"url":"#","service":"instagram","label":"Instagram"} /-->
 
-<!-- wp:social-link {"url":"#","service":"twitter"} /--></ul>
+<!-- wp:social-link {"url":"#","service":"twitter","label":"Twitter"} /--></ul>
 <!-- /wp:social-links --></div>
 <!-- /wp:column -->
 
