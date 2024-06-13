@@ -71,8 +71,7 @@
 		"blocks": {
 			"core/paragraph": {
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--medium)",
-					"textTransform": "capitalize"
+					"fontSize": "var(--wp--preset--font-size--medium)"
 				}
 			}
 		},
@@ -113,11 +112,6 @@
 					"fontSize": "1rem"
 				}
 			},
-			"heading": {
-				"typography": {
-					"textTransform": "lowercase"
-				}
-			},
 			"link": {
 				"color": {
 					"text": "var(--wp--preset--color--custom-grey)"
@@ -137,7 +131,6 @@
 			"fontFamily": "var(--wp--preset--font-family--system-font)",
 			"fontSize": "var(--wp--preset--font-size--medium)",
 			"lineHeight": "1.5",
-			"textTransform": "capitalize"
 		}
 	},
 	"templateParts": [
