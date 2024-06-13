@@ -12,8 +12,8 @@
 <div class="wp-block-group"><!-- wp:site-title {"level":0,"isLink":true,"style":{"typography":{"fontStyle":"normal","fontWeight":"600"}},"fontSize":"medium"} /-->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"48px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
-<div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"lineHeight":"0.8"}},"fontSize":"xx-large","fontFamily":"rozha-one"} -->
-<p class="has-rozha-one-font-family has-xx-large-font-size" style="line-height:0.8">Food <br>for thoughts</p>
+<div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"lineHeight":"0.8"}},"fontSize":"xx-large","fontFamily":"heading"} -->
+<h2 class="has-heading-font-family has-xx-large-font-size" style="line-height:0.8">Food <br>for thoughts</h2>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"style":{"typography":{"lineHeight":"1.5"}},"fontSize":"medium"} -->
