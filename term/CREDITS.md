@@ -8,3 +8,4 @@
 - [celiarozalenm](https://github.com/celiarozalenm)
 - [liviopv](https://github.com/liviopv)
 - [mlaetitia](https://github.com/mlaetitia)
+- [tdrayson](https://github.com/tdrayson)
