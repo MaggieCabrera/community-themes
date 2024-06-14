@@ -122,7 +122,7 @@
 	},
 	"styles": {
 		"color": {
-			"background": "var(--wp--preset--color--white)"
+			"background": "var(--wp--preset--color--custom-background)"
 		},
 		"elements": {
 			"h1": {
