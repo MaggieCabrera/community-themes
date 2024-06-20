@@ -1,8 +1,8 @@
 === Poetry ===
-Contributors: 
-Requires at least: 5.8
-Tested up to: 5.9
-Requires PHP: 5.7
+Contributors: wordpressdotorg
+Requires at least: 6.5
+Tested up to: 6.5.2
+Requires PHP: 7.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -17,7 +17,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Copyright ==
 
-Poetry WordPress Theme, (C) 2023 
+Poetry WordPress Theme, (C) 2023 the WordPress team 
 Poetry is distributed under the terms of the GNU GPL.
 
 This program is free software: you can redistribute it and/or modify

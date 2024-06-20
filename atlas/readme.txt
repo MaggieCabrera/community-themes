@@ -17,7 +17,7 @@ Atlas is a WordPress theme for anyone who wants to take their website to new hei
 
 == Copyright ==
 
-Atlas WordPress Theme, (C) 2022 
+Atlas WordPress Theme, (C) 2022 the WordPress team 
 Atlas is distributed under the terms of the GNU GPL.
 
 This program is free software: you can redistribute it and/or modify
