@@ -1,8 +1,8 @@
 === Term ===
-Contributors: 
-Requires at least: 6.0
-Tested up to: 6.4.4-alpha-57488-src
-Requires PHP: 5.7
+Contributors: wordpressdotorg
+Requires at least: 6.5
+Tested up to: 6.5.2
+Requires PHP: 7.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -17,7 +17,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Copyright ==
 
-Term WordPress Theme, (C) 2024 
+Term WordPress Theme, (C) 2024 the WordPress team 
 Term is distributed under the terms of the GNU GPL.
 
 This program is free software: you can redistribute it and/or modify

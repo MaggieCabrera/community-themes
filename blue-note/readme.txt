@@ -1,6 +1,6 @@
 === Blue Note ===
 Contributors: wordpressdotorg
-Requires at least: 6.1
+Requires at least: 6.2
 Tested up to: 6.5
 Requires PHP: 7.4
 License: GPLv2 or later
