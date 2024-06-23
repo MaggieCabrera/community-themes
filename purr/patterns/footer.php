@@ -13,7 +13,6 @@
 						$wordpress_link
 				);
 			?>
-
 		</p>
 		<!-- /wp:paragraph -->
 	</div>
