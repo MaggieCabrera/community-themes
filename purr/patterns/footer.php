@@ -1,3 +1,12 @@
+<?php
+/**
+ * Title: Footer
+ * Slug: purr/footer
+ * Categories: footer
+ * Description: A Footer section.
+ */
+?>
+
 <!-- wp:group {"style":{"border":{"top":{"color":"#f2f2f2","width":"1px"},"right":[],"bottom":[],"left":[]}},"layout":{"inherit":true,"type":"constrained"}} -->
 <div class="wp-block-group" style="border-top-color:#f2f2f2;border-top-width:1px">
 	<!-- wp:group {"style":{"spacing":{"padding":{"top":"80px","bottom":"30px"}}}} -->
@@ -13,6 +22,7 @@
 						$wordpress_link
 				);
 			?>
+
 		</p>
 		<!-- /wp:paragraph -->
 	</div>
