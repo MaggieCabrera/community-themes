@@ -3,6 +3,7 @@
  * Title: Footer
  * Slug: purr/footer
  * Categories: footer
+ * Block Types: core/template-part/footer
  * Description: A Footer section.
  */
 ?>

@@ -3,6 +3,8 @@
  * Title: Right Sidebar
  * Slug: purr/right-sidebar
  * Categories: sidebar
+ * Block Types: core/template-part/sidebar
+ * Description: Right Sidebar
  */
 ?>
 
