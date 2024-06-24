@@ -12,6 +12,8 @@
 		"patterns:escape": "node ./theme-utils.mjs escape-patterns"
 	},
 	"devDependencies": {
+		"ajv": "^8.16.0",
+		"ajv-draft-04": "^1.0.0",
 		"fs-extra": "^11.1.0",
 		"inquirer": "^9.1.4",
 		"parse5-html-rewriting-stream": "^7.0.0",
