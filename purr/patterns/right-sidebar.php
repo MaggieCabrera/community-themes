@@ -5,6 +5,7 @@
  * Categories: sidebar
  * Block Types: core/template-part/sidebar
  * Description: Right Sidebar
+ * Viewport width: 300
  */
 ?>
 
