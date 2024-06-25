@@ -295,7 +295,7 @@ async function validateSchema(files) {
 				throw ajv.errors;
 			}
 		} catch (error) {
-			errors.push({ filename, error });
+			errors.push({ file: filename, error });
 		}
 		progress = progressbar.filledBar(files.length, i + 1)[0];
 		process.stdout.write(`\r${progress} ${i + 1}/${files.length}`, 'utf-8');
