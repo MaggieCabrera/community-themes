@@ -270,11 +270,12 @@ async function validateSchema(files) {
 	process.stdout.write(`${progress} 0/${files.length}`, 'utf-8');
 	for (let i = 0; i < files.length; i++) {
 		const filename = files[i];
+		let schemaURL;
 		try {
 			const file = await fs.promises
 				.readFile(filename, 'utf-8')
 				.then(JSON.parse);
-			const schemaURL = file.$schema;
+			schemaURL = file.$schema;
 			let schema;
 			if (!schemaURL) {
 				schema = {
@@ -295,7 +296,7 @@ async function validateSchema(files) {
 				throw ajv.errors;
 			}
 		} catch (error) {
-			errors.push({ file: filename, error });
+			errors.push({ file: filename, schema: schemaURL ?? 'missing schema', error });
 		}
 		progress = progressbar.filledBar(files.length, i + 1)[0];
 		process.stdout.write(`\r${progress} ${i + 1}/${files.length}`, 'utf-8');
