@@ -31,7 +31,8 @@ const commands = {
 	let command = args?.[0];
 
 	if (!commands[command]) {
-		return showHelp();
+		showHelp();
+		process.exit(1);
 	}
 
 	commands[command].run(args);
