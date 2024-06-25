@@ -7,7 +7,7 @@ import inquirer from 'inquirer';
 import { RewritingStream } from 'parse5-html-rewriting-stream';
 import { table } from 'table';
 import progressbar from 'string-progressbar';
-import Ajv from 'ajv-draft-04';
+import Ajv from 'ajv';
 
 const isWin = process.platform === 'win32';
 
@@ -261,51 +261,56 @@ async function escapePatterns() {
 	}
 }
 
-async function validateSchema(files) {
-	const ajv = new Ajv({
+async function validateSchema( files ) {
+	const ajv = new Ajv( {
 		allowMatchingProperties: true,
 		allErrors: true,
-	});
+		loadSchema: async ( uri ) => {
+			if ( uri.startsWith( 'http' ) ) {
+				return fetch( uri ).then( ( res ) => res.json() );
+			}
+			return fs.promises.readFile( uri, 'utf-8' ).then( JSON.parse );
+		},
+	} );
+	ajv.addMetaSchema(
+		await fs.promises
+			.readFile( './json-schema-draft-04.json', 'utf-8' )
+			.then( JSON.parse )
+	);
 	const errors = [];
-	let progress = progressbar.filledBar(files.length, 0)[0];
-	process.stdout.write(`${progress} 0/${files.length}`, 'utf-8');
-	for (let i = 0; i < files.length; i++) {
-		const filename = files[i];
-		let schemaURL;
+	let progress = progressbar.filledBar( files.length, 0 )[ 0 ];
+	process.stdout.write( `${ progress } 0/${ files.length }`, 'utf-8' );
+	for ( const [ i, file ] of files.entries() ) {
+		let schemaUri;
 		try {
-			const file = await fs.promises
-				.readFile(filename, 'utf-8')
-				.then(JSON.parse);
-			schemaURL = file.$schema;
-			let schema;
-			if (!schemaURL) {
-				schema = {
-					type: 'object',
-					required: ['$schema'],
-				};
-			} else if (schemaURL.startsWith('http')) {
-				schema = await fetch(schemaURL).then((res) => res.json());
-			} else {
-				schema = await fs.promises
-					.readFile(
-						path.join(path.dirname(filename), schemaURL),
-						'utf-8'
-					)
-					.then(JSON.parse);
+			const data = await fs.promises
+				.readFile( file, 'utf-8' )
+				.then( JSON.parse );
+			schemaUri =
+				typeof data?.$schema === 'string' &&
+				! data.$schema.startsWith( 'http' )
+					? path.resolve( path.dirname( file ), data.$schema )
+					: data?.$schema;
+			const schema = schemaUri
+				? { $ref: schemaUri }
+				: { type: 'object', required: [ '$schema' ] };
+			const validate = await ajv.compileAsync( schema );
+			if ( ! validate( data ) ) {
+				throw validate.errors;
 			}
-			if (!ajv.validate(schema, file)) {
-				throw ajv.errors;
-			}
-		} catch (error) {
-			errors.push({ file: filename, schema: schemaURL, error });
+		} catch ( error ) {
+			errors.push( { file, schema: schemaUri, error } );
 		}
-		progress = progressbar.filledBar(files.length, i + 1)[0];
-		process.stdout.write(`\r${progress} ${i + 1}/${files.length}`, 'utf-8');
+		progress = progressbar.filledBar( files.length, i + 1 )[ 0 ];
+		process.stdout.write(
+			`\r${ progress } ${ i + 1 }/${ files.length }`,
+			'utf-8'
+		);
 	}
 	console.log();
-	if (errors.length) {
-		console.log(JSON.stringify(errors, null, 2));
-		process.exit(1);
+	if ( errors.length ) {
+		console.log( JSON.stringify( errors, null, 2 ) );
+		process.exit( 1 );
 	}
 }
 
