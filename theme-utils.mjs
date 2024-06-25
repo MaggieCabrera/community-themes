@@ -1,6 +1,7 @@
 
 import { spawn } from 'child_process';
 import fs from 'fs';
+import path from 'path';
 import process from 'process';
 import inquirer from 'inquirer';
 import { RewritingStream } from 'parse5-html-rewriting-stream';
@@ -11,9 +12,9 @@ import Ajv from 'ajv-draft-04';
 const isWin = process.platform === 'win32';
 
 const commands = {
-	validate: {
+	'validate-schema': {
 		helpText: 'Validates the theme.json file(s) against the JSON Schema.',
-		run: (args) => validate(args?.slice(1)),
+		run: (args) => validateSchema(args?.slice(1)),
 	},
 	"escape-patterns": {
 		helpText: 'Escapes block patterns for pattern files that have changes (staged or unstaged).',
@@ -259,45 +260,49 @@ async function escapePatterns() {
 	}
 }
 
-async function validate(files) {
+async function validateSchema(files) {
 	const ajv = new Ajv({
 		allowMatchingProperties: true,
 		allErrors: true,
 	});
 	const errors = [];
+	let progress = progressbar.filledBar(files.length, 0)[0];
+	process.stdout.write(`${progress} 0/${files.length}`, 'utf-8');
 	for (let i = 0; i < files.length; i++) {
 		const filename = files[i];
 		try {
 			const file = await fs.promises
 				.readFile(filename, 'utf-8')
 				.then(JSON.parse);
-			const schemaURL = file['$schema'];
-			const schema = !schemaURL
-				? {
-						type: 'object',
-						required: ['$schema'],
-				  }
-				: schemaURL.startsWith('http')
-				? await fetch(schemaURL).then((res) => res.json())
-				: await fs.promises
-						.readFile(
-							path.join(path.dirname(filename), schemaURL),
-							'utf-8'
-						)
-						.then(JSON.parse);
+			const schemaURL = file.$schema;
+			let schema;
+			if (!schemaURL) {
+				schema = {
+					type: 'object',
+					required: ['$schema'],
+				};
+			} else if (schemaURL.startsWith('http')) {
+				schema = await fetch(schemaURL).then((res) => res.json());
+			} else {
+				schema = await fs.promises
+					.readFile(
+						path.join(path.dirname(filename), schemaURL),
+						'utf-8'
+					)
+					.then(JSON.parse);
+			}
 			if (!ajv.validate(schema, file)) {
 				throw ajv.errors;
 			}
 		} catch (error) {
 			errors.push({ filename, error });
-		} finally {
-			const bar = progressbar.filledBar(files.length, i + 1)[0];
-			process.stdout.write(`${bar} ${i + 1}/${files.length}\r`, 'utf-8');
 		}
+		progress = progressbar.filledBar(files.length, i + 1)[0];
+		process.stdout.write(`\r${progress} ${i + 1}/${files.length}`, 'utf-8');
 	}
+	console.log();
 	if (errors.length) {
-		console.log();
-		console.error(JSON.stringify(errors, null, 2));
+		console.log(JSON.stringify(errors, null, 2));
 		process.exit(1);
 	}
 }
