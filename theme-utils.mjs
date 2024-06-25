@@ -265,6 +265,7 @@ async function validateSchema( files ) {
 	const ajv = new Ajv( {
 		allowMatchingProperties: true,
 		allErrors: true,
+		schemaId: 'auto',
 		loadSchema: async ( uri ) => {
 			if ( uri.startsWith( 'http' ) ) {
 				return fetch( uri ).then( ( res ) => res.json() );
@@ -274,7 +275,10 @@ async function validateSchema( files ) {
 	} );
 	ajv.addMetaSchema(
 		await fs.promises
-			.readFile( './json-schema-draft-04.json', 'utf-8' )
+			.readFile(
+				'./node_modules/ajv/lib/refs/json-schema-draft-04.json',
+				'utf-8'
+			)
 			.then( JSON.parse )
 	);
 	const errors = [];

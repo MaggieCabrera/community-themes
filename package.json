@@ -14,7 +14,7 @@
 		"prepare": "husky install"
 	},
 	"devDependencies": {
-		"ajv": "^8.16.0",
+		"ajv": "^6.12.6",
 		"fs-extra": "^11.1.0",
 		"husky": "^8.0.0",
 		"inquirer": "^9.1.4",
