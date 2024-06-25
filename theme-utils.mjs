@@ -8,6 +8,7 @@ import { RewritingStream } from 'parse5-html-rewriting-stream';
 import { table } from 'table';
 import progressbar from 'string-progressbar';
 import Ajv from 'ajv';
+import AjvDraft04 from 'ajv-draft-04';
 
 const isWin = process.platform === 'win32';
 
@@ -262,43 +263,48 @@ async function escapePatterns() {
 }
 
 async function validateSchema( files ) {
-	const ajv = new Ajv( {
+	function readJson( file ) {
+		return fs.promises.readFile( file, 'utf-8' ).then( JSON.parse );
+	}
+	async function loadSchema( uri, dirname = '' ) {
+		if ( ! uri ) {
+			return {
+				$schema: 'http://json-schema.org/draft-07/schema#',
+				type: 'object',
+				required: [ '$schema' ],
+			};
+		}
+		if ( ! URL.canParse( uri ) ) {
+			return readJson( path.resolve( dirname, uri ) );
+		}
+		const url = new URL( uri );
+		if ( url.protocol === 'http:' || url.protocol === 'https:' ) {
+			return fetch( url ).then( ( res ) => res.json() );
+		}
+		if ( url.protocol === 'file:' ) {
+			return readJson( path.resolve( dirname, url.href.slice( 7 ) ) );
+		}
+		throw new Error( `Unsupported schema protocol: ${ url.protocol }` );
+	}
+	const ajvOptions = {
 		allowMatchingProperties: true,
 		allErrors: true,
-		schemaId: 'auto',
-		loadSchema: async ( uri ) => {
-			if ( uri.startsWith( 'http' ) ) {
-				return fetch( uri ).then( ( res ) => res.json() );
-			}
-			return fs.promises.readFile( uri, 'utf-8' ).then( JSON.parse );
-		},
-	} );
-	ajv.addMetaSchema(
-		await fs.promises
-			.readFile(
-				'./node_modules/ajv/lib/refs/json-schema-draft-04.json',
-				'utf-8'
-			)
-			.then( JSON.parse )
-	);
+		loadSchema,
+	};
+	const ajv = {
+		'http://json-schema.org/draft-07/schema#': new Ajv( ajvOptions ),
+		'http://json-schema.org/draft-04/schema#': new AjvDraft04( ajvOptions ),
+	};
 	const errors = [];
 	let progress = progressbar.filledBar( files.length, 0 )[ 0 ];
 	process.stdout.write( `${ progress } 0/${ files.length }`, 'utf-8' );
 	for ( const [ i, file ] of files.entries() ) {
 		let schemaUri;
 		try {
-			const data = await fs.promises
-				.readFile( file, 'utf-8' )
-				.then( JSON.parse );
-			schemaUri =
-				typeof data?.$schema === 'string' &&
-				! data.$schema.startsWith( 'http' )
-					? path.resolve( path.dirname( file ), data.$schema )
-					: data?.$schema;
-			const schema = schemaUri
-				? { $ref: schemaUri }
-				: { type: 'object', required: [ '$schema' ] };
-			const validate = await ajv.compileAsync( schema );
+			const data = await readJson( file );
+			schemaUri = data.$schema;
+			const schema = await loadSchema( schemaUri, path.dirname( file ) );
+			const validate = await ajv[ schema.$schema ].compileAsync( schema );
 			if ( ! validate( data ) ) {
 				throw validate.errors;
 			}
