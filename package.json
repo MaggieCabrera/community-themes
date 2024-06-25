@@ -10,7 +10,8 @@
 	},
 	"scripts": {
 		"patterns:escape": "node ./theme-utils.mjs escape-patterns",
-		"schema:validate": "node ./theme-utils.mjs validate-schema"
+		"schema:validate": "node ./theme-utils.mjs validate-schema",
+		"prepare": "husky install"
 	},
 	"devDependencies": {
 		"ajv": "^8.16.0",
@@ -20,6 +21,7 @@
 		"lint-staged": "^15.2.7",
 		"parse5-html-rewriting-stream": "^7.0.0",
 		"string-progressbar": "^1.0.4",
-		"table": "^6.8.1"
+		"table": "^6.8.1",
+		"husky": "^8.0.0"
 	}
 }
