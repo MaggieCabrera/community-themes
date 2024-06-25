@@ -319,7 +319,7 @@ async function validateSchema( files ) {
 	}
 	console.log();
 	if ( errors.length ) {
-		console.log( JSON.stringify( errors, null, 2 ) );
+		console.dir( errors, { depth: null } );
 		process.exit( 1 );
 	}
 }
