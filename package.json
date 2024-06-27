@@ -9,11 +9,17 @@
 		"npm": ">=10.2.3"
 	},
 	"scripts": {
-		"patterns:escape": "node ./theme-utils.mjs escape-patterns"
+		"patterns:escape": "node ./theme-utils.mjs escape-patterns",
+		"schema:validate": "node ./theme-utils.mjs validate-schema",
+		"prepare": "husky install"
 	},
 	"devDependencies": {
+		"ajv": "^8.16.0",
+		"ajv-draft-04": "^1.0.0",
 		"fs-extra": "^11.1.0",
+		"husky": "^8.0.0",
 		"inquirer": "^9.1.4",
+		"lint-staged": "^15.2.7",
 		"parse5-html-rewriting-stream": "^7.0.0",
 		"string-progressbar": "^1.0.4",
 		"table": "^6.8.1"

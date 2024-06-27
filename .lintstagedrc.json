@@ -1,0 +1,3 @@
+{
+	"{**/theme.json,**/styles/*.json,**/assets/fonts/*.json}": "node ./theme-utils.mjs validate-schema"
+}
