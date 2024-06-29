@@ -32,7 +32,6 @@ GNU General Public License for more details.
 
 This theme bundles the following third-party resources:
 
-
 === Fonts ===
 
 Jost Font
