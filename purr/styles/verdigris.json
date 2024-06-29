@@ -37,11 +37,11 @@
 							]
 						},
 						{
-							"fontFamily": "Instrument Sans",
+							"fontFamily": "DM Sans",
 							"fontStyle": "italic",
-							"fontWeight": "400 700",
+							"fontWeight": "700",
 							"src": [
-								"file:./assets/fonts/instrument-sans/InstrumentSans-Italic-VariableFont_wdth,wght.woff2"
+								"file:./assets/fonts/dm-sans/DMSans-Bold-Italic.woff2"
 							]
 						}
 					],
