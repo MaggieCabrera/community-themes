@@ -32,15 +32,8 @@ GNU General Public License for more details.
 
 This theme bundles the following third-party resources:
 
-=== Fonts ===
-This theme bundles the following third-party resources:
 
 === Fonts ===
-
-Cardo Font
-Copyright (c) 2002-2011, David J. Perry (hospes02@scholarsfonts.net)
-License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
-Source: http://scholarsfonts.net
 
 Jost Font
 Copyright 2020 The Jost Project Authors.
