@@ -25,8 +25,9 @@
 			"wideSize": "1800px"
 		},
 		"spacing": {
-			"spacingScale": {
-				"steps": 0
+			"padding": {
+				"left": "var(--wp--preset--spacing--50)",
+				"right": "var(--wp--preset--spacing--50)"
 			},
 			"spacingSizes": [
 				{
