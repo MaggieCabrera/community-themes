@@ -3,7 +3,6 @@
 /**
  * Title: single
  * Slug: poetry/single
- * Categories: hidden
  * Inserter: no
  */
 ?>
@@ -17,7 +16,7 @@
 
         <!-- wp:group {"style":{"spacing":{"padding":{"right":"56px","left":"56px"},"blockGap":"32px"},"border":{"left":{"width":"2px"}}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
         <div class="wp-block-group" style="border-left-width:2px;padding-right:56px;padding-left:56px"><!-- wp:image {"id":15,"width":"56px","height":"56px","sizeSlug":"full","linkDestination":"none"} -->
-            <figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/assets/images/feather-small.png" alt="" class="wp-image-15" style="width:56px;height:56px" /></figure>
+            <figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/feather-small.png" alt="" class="wp-image-15" style="width:56px;height:56px" /></figure>
 
             <!-- /wp:image -->
 
