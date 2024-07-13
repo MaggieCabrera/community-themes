@@ -45,3 +45,8 @@ Copyright 2019 Google LLC
 Copyright 2014-2018 Adobe (http://www.adobe.com/)
 License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
 Source: https://github.com/googlefonts/dm-fonts
+
+Instrument Sans Font
+Copyright 2022 The Instrument Sans Project Authors.
+License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
+Source: https://github.com/Instrument/instrument-sans
