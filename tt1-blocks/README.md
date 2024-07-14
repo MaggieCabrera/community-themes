@@ -11,7 +11,7 @@ To contribute to the development of TT1 Blocks, please read the [contributor's g
 ## Installation
 
 1. In your admin panel, install and activate [the Gutenberg Plugin](https://wordpress.org/plugins/gutenberg/). 
-2. Click the 'Code' button on [the main Theme Experiments Repository GitHub page](https://github.com/wordpress/theme-experiments).
+2. Click the 'Code' button on [the main Theme Experiments Repository GitHub page](https://github.com/WordPress/community-themes).
 3. Unzip the resulting download.
 4. Move or upload the "theme-experiments" folder into your site's `wp-content/themes` folder.
 5. Visit `Appearance > Themes` and activate the "TT1 Blocks" theme.
