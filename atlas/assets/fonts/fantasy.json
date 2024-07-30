@@ -1,0 +1,59 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/font-collection.json",
+	"font_families": [
+		{
+			"font_family_settngs": {
+				"name": "Henny Penny",
+				"fontFamily": "Henny Penny, system-ui",
+				"slug": "henny-penny",
+				"fontFace": [
+					{
+						"src": "https://fonts.gstatic.com/s/hennypenny/v17/wXKvE3UZookzsxz_kjGSfMQvt3M7tMDT.woff2",
+						"fontWeight": "400",
+						"fontStyle": "normal",
+						"fontFamily": "Henny Penny",
+						"preview": "https://s.w.org/images/fonts/17.7/previews/henny-penny/henny-penny-400-normal.svg"
+					}
+				],
+				"preview": "https://s.w.org/images/fonts/17.7/previews/henny-penny/henny-penny.svg"
+			},
+			"categories": [ "display" ]
+		},
+		{
+			"font_family_settings": {
+				"name": "MedievalSharp",
+				"fontFamily": "MedievalSharp, system-ui",
+				"slug": "medievalsharp",
+				"fontFace": [
+					{
+						"src": "https://fonts.gstatic.com/s/medievalsharp/v26/EvOJzAlL3oU5AQl2mP5KdgptAqp6MwvXLDk.woff2",
+						"fontWeight": "400",
+						"fontStyle": "normal",
+						"fontFamily": "MedievalSharp",
+						"preview": "https://s.w.org/images/fonts/17.7/previews/medievalsharp/medievalsharp-400-normal.svg"
+					}
+				],
+				"preview": "https://s.w.org/images/fonts/17.7/previews/medievalsharp/medievalsharp.svg"
+			},
+			"categories": [ "display" ]
+		},
+		{
+			"font_family_settings": {
+				"name": "Metamorphous",
+				"fontFamily": "Metamorphous, system-ui",
+				"slug": "metamorphous",
+				"fontFace": [
+					{
+						"src": "https://fonts.gstatic.com/s/metamorphous/v20/Wnz8HA03aAXcC39ZEX5y1330OSCthTsmaQ.woff2",
+						"fontWeight": "400",
+						"fontStyle": "normal",
+						"fontFamily": "Metamorphous",
+						"preview": "https://s.w.org/images/fonts/17.7/previews/metamorphous/metamorphous-400-normal.svg"
+					}
+				],
+				"preview": "https://s.w.org/images/fonts/17.7/previews/metamorphous/metamorphous.svg"
+			},
+			"categories": [ "display" ]
+		}
+	]
+}
