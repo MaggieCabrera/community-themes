@@ -1,0 +1,43 @@
+name: Validate JSON Schemas
+
+on:
+    pull_request:
+        paths:
+            - '**/theme.json'
+            - '**/styles/*.json'
+            - '**/assets/fonts/*.json'
+
+env:
+    PR_PATHS: >-
+        '**/theme.json'
+        '**/styles/*.json'
+        '**/assets/fonts/*.json'
+    HUSKY: 0
+
+jobs:
+    validate-schema:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+              with:
+                  repository: ${{ github.event.pull_request.head.repo.full_name }}
+                  ref: ${{ github.event.pull_request.head.ref }}
+
+            - name: Fetch compare
+              run: |
+                git remote add upstream ${{ github.event.pull_request.base.repo.repositoryUrl }}
+                git fetch --no-write-fetch-head --depth=1 upstream ${{ github.event.pull_request.base.ref }}
+
+            - name: Setup Node
+              uses: actions/setup-node@v4
+              with:
+                  node-version-file: '.nvmrc'
+                  cache: 'npm'
+
+            - name: Install dependencies
+              run: npm ci
+
+            - name: Validate JSON files
+              run: node theme-utils.mjs validate-schema $(git diff --name-only upstream/${{ github.event.pull_request.base.ref }} ${{ github.event.pull_request.head.ref }} -- ${{ env.PR_PATHS }} | tr '\n' ' ')
