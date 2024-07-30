@@ -34,7 +34,7 @@ function blue_note_register_block_styles() {
 			array(
 				'name'         => 'blue-note-thick-stripes',
 				'label'        => __( 'Thick Stripes', 'blue-note' ),
-				'inline_style' => '.is-style-blue-note-thick-stripes{ clip-path: url('. esc_url( get_stylesheet_directory_uri() ) .'/assets/images/thick-stripes.svg#blue-note-thick-stripes); }',
+				'inline_style' => '.is-style-blue-note-thick-stripes{ clip-path: url('. esc_url( get_template_directory_uri() ) .'/assets/images/thick-stripes.svg#blue-note-thick-stripes); }',
 			)
 		);
 		register_block_style(
@@ -88,7 +88,7 @@ if ( ! function_exists( 'blue_note_styles' ) ) :
 		// Register theme stylesheet.
 		wp_register_style(
 			'blue_note-style',
-			get_stylesheet_directory_uri() . '/style.css',
+			get_template_directory_uri() . '/style.css',
 			array(),
 			wp_get_theme()->get( 'Version' )
 		);

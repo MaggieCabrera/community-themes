@@ -1,7 +1,7 @@
 === Blue Note ===
 Contributors: wordpressdotorg
-Requires at least: 6.1
-Tested up to: 6.3
+Requires at least: 6.2
+Tested up to: 6.5
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -10,6 +10,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Blue Note is an elegant and fun block theme inspired by jazz and the record label "Blue Note Records". Its timeless typography and modern, responsive layouts are perfect for writers and bloggers.
 
 == Changelog ==
+
+= 1.0.2 =
+* Replaced get_stylesheet_directory_uri() with get_template_directory_uri() to ensure child themes work correctly
 
 = 1.0.1 =
 * Updated screenshot file

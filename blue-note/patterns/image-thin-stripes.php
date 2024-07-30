@@ -10,5 +10,5 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:image {"sizeSlug":"full","linkDestination":"none","style":{"color":{"duotone":"var:preset|duotone|black-pink"}},"className":"is-style-blue-note-thin-stripes"} -->
-<figure class="wp-block-image size-full is-style-blue-note-thin-stripes"><img src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/Ethel-Waters.jpg" alt=""/></figure>
+<figure class="wp-block-image size-full is-style-blue-note-thin-stripes"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/Ethel-Waters.jpg" alt=""/></figure>
 <!-- /wp:image -->

@@ -1,7 +1,7 @@
 === TT1 Blocks ===
 Contributors: wordpressdotorg
 Requires at least: 5.6
-Tested up to: 5.8
+Tested up to: 6.6
 Requires PHP: 7.4
 Stable tag: 0.4.8
 License: GPLv2 or later
@@ -13,7 +13,7 @@ TT1 Blocks is an experimental block theme version of the Twenty Twenty-One theme
 
 TT1 Blocks is a block theme version the <a href="https://wordpress.org/themes/twentytwentyone/">Twenty Twenty-One</a> theme. It is built to leverage the full site editing functionality that is being built in the <a href="https://wordpress.org/plugins/gutenberg/">Gutenberg plugin</a>.
 
-This theme is beta software, and is not meant for use on a production site. Bug reports, fixes, and other and contributions are welcome <a href="https://github.com/WordPress/theme-experiments/issues">in the theme's GitHub repository</a>.
+This theme is beta software, and is not meant for use on a production site. Bug reports, fixes, and other and contributions are welcome <a href="https://github.com/WordPress/community-themes/issues">in the theme's GitHub repository</a>.
 
 == Installation ==
 
