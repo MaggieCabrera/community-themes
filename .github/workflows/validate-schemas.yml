@@ -34,4 +34,4 @@ jobs:
               run: npm ci
 
             - name: Validate JSON files
-              run: node theme-utils.mjs validate-schema $(git diff --name-only origin/${{ github.base_ref }}...HEAD -- ${{ env.PR_PATHS }} | tr '\n' ' ')
+              run: node theme-utils.mjs validate-schema $(git diff --name-only HEAD^ -- ${{ env.PR_PATHS }} | tr '\n' ' ')
