@@ -22,13 +22,7 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v4
               with:
-                  repository: ${{ github.event.pull_request.head.repo.full_name }}
-                  ref: ${{ github.event.pull_request.head.ref }}
-
-            - name: Fetch compare
-              run: |
-                git remote add upstream ${{ github.event.pull_request.base.repo.repositoryUrl }}
-                git fetch --no-write-fetch-head --depth=1 upstream ${{ github.event.pull_request.base.ref }}
+                fetch-depth: 2
 
             - name: Setup Node
               uses: actions/setup-node@v4
@@ -40,4 +34,4 @@ jobs:
               run: npm ci
 
             - name: Validate JSON files
-              run: node theme-utils.mjs validate-schema $(git diff --name-only upstream/${{ github.event.pull_request.base.ref }} ${{ github.event.pull_request.head.ref }} -- ${{ env.PR_PATHS }} | tr '\n' ' ')
+              run: node theme-utils.mjs validate-schema $(git diff --name-only origin/${{ github.base_ref }}...HEAD -- ${{ env.PR_PATHS }} | tr '\n' ' ')
