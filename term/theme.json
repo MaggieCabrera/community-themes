@@ -21,23 +21,23 @@
 			]
 		},
 		"custom": {
-			"lineHeight": {
-				"none": 1,
-				"tight": 1.1,
-				"snug": 1.2,
-				"relaxed": 1.4,
-				"body": 1.5
-			},
 			"fontWeight": {
-				"thin": 100,
-				"extra-light": 200,
-				"light": 300,
-				"regular": 425,
-				"medium": 500,
-				"semi-bold": 600,
+				"black": 900,
 				"bold": 700,
 				"extra-bold": 800,
-				"black": 900
+				"extra-light": 200,
+				"light": 300,
+				"medium": 500,
+				"regular": 425,
+				"semi-bold": 600,
+				"thin": 100
+			},
+			"lineHeight": {
+				"body": 1.5,
+				"none": 1,
+				"relaxed": 1.3999999999999999,
+				"snug": 1.2,
+				"tight": 1.1000000000000001
 			}
 		},
 		"layout": {
@@ -55,6 +55,7 @@
 			]
 		},
 		"typography": {
+			"defaultFontSizes": false,
 			"fontFamilies": [
 				{
 					"fontFamily": "'HelveticaNeue Regular','HelveticaNeue-Light', 'Helvetica Neue Light', 'HelveticaNeue', Helvetica, Arial, 'Lucida Grande', sans-serif",
@@ -85,24 +86,24 @@
 				},
 				{
 					"fluid": {
-						"min": "2rem",
-						"max": "2.375rem"
+						"max": "2.375rem",
+						"min": "2rem"
 					},
 					"size": "2.375rem",
 					"slug": "x-large"
 				},
 				{
 					"fluid": {
-						"min": "2.6255rem",
-						"max": "3rem"
+						"max": "3rem",
+						"min": "2.6255rem"
 					},
 					"size": "3rem",
 					"slug": "xx-large"
 				},
 				{
 					"fluid": {
-						"min": "3.25rem",
-						"max": "4rem"
+						"max": "4rem",
+						"min": "3.25rem"
 					},
 					"size": "4rem",
 					"slug": "huge"
@@ -113,9 +114,27 @@
 	},
 	"styles": {
 		"blocks": {
+			"core/navigation": {
+				"spacing": {
+					"blockGap": "var(--wp--preset--spacing--80)"
+				},
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--medium)"
+				}
+			},
 			"core/paragraph": {
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--medium)"
+				}
+			},
+			"core/site-tagline": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--xx-small)"
+				}
+			},
+			"core/site-title": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--x-large)"
 				}
 			}
 		},
@@ -198,6 +217,6 @@
 			"name": "footer"
 		}
 	],
-	"version": 2,
-	"$schema": "https://schemas.wp.org/wp/6.5/theme.json"
+	"version": 3,
+	"$schema": "https://schemas.wp.org/wp/6.6/theme.json"
 }
