@@ -45,6 +45,10 @@
 			"fontSizes": [
 				{
 					"size": "1rem",
+					"slug": "xx-small"
+				},
+				{
+					"size": "1.25rem",
 					"slug": "x-small"
 				},
 				{
