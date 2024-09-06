@@ -210,6 +210,28 @@
 			"link": {
 				"color": {
 					"text": "var(--wp--preset--color--custom-grey)"
+				},
+				":hover": {
+					"color": {
+						"text": "var(--wp--preset--color--custom-black)"
+					}
+				},
+				":active": { 
+					"color": {
+						"text": "var(--wp--preset--color--custom-black)"
+					}
+				},
+				":focus": {
+					"typography": {
+						"textDecoration": "none"
+					},
+					"color": {
+						"text": "var(--wp--preset--color--custom-black)"
+					},
+					"outline": {
+						"style": "dotted",
+						"color": "var(--wp--preset--color--custom-black)"
+					}
 				}
 			}
 		},
