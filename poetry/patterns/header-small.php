@@ -13,7 +13,7 @@
 <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
 <div class="wp-block-group"><!-- wp:group {"style":{"spacing":{"blockGap":"0.25rem"}},"layout":{"type":"flex","orientation":"vertical"}} -->
 <div class="wp-block-group"><!-- wp:heading {"level":1,"style":{"typography":{"fontSize":"2rem"}}} -->
-<h1 class="wp-block-heading" style="font-size:2rem">Food for thoughts</h1>
+<h1 class="wp-block-heading" style="font-size:2rem"><?php echo esc_html__( 'Food for thoughts', 'poetry' ); ?></h1>
 <!-- /wp:heading -->
 
 <!-- wp:site-tagline {"style":{"typography":{"lineHeight":"1.5"}}} /--></div>
