@@ -35,28 +35,6 @@ if ( ! function_exists( 'term_block_styles' ) ) :
 			)
 		);
 
-		register_block_style(
-			'core/group',
-			array(
-				'name' => 'hover-effect',
-				'label' => __( 'Hover effect', 'term'),
-				'inline_style' => '
-				.is-style-hover-effect {
-					background-color: #EDECE8;
-				}
-				.is-style-hover-effect:hover {
-					background-color: #131B1E;
-				}
-				.is-style-hover-effect:hover a,
-				.is-style-hover-effect:hover p {
-					color: #EDECE8;
-				}
-				.is-style-hover-effect:hover {
-					transition: all 0.2s ease-in-out;
-				}',
-			)
-		);
-
 	}
 endif;
 
