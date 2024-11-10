@@ -149,11 +149,6 @@
 		}
 	},
 	"styles": {
-		"blocks": {
-			"core/group": {
-				"css": ".header-small__container {align-items: baseline !important;}"
-			}
-		},
 		"color": {
 			"background": "var(--wp--preset--color--custom-background)"
 		},
