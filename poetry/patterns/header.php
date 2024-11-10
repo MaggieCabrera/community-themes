@@ -6,19 +6,17 @@
  * Inserter: no
  */
 ?>
-<!-- wp:group {"style":{"spacing":{"padding":{"top":"32px","bottom":"64px"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group" style="padding-top:32px;padding-bottom:64px"><!-- wp:group {"style":{"spacing":{"blockGap":"64px"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
-<div class="wp-block-group"><!-- wp:group {"style":{"spacing":{"blockGap":"88px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
-<div class="wp-block-group"><!-- wp:site-title {"level":0,"isLink":true,"style":{"typography":{"fontStyle":"normal","fontWeight":"600"}},"fontSize":"medium"} /-->
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|40"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--40)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|40","margin":{"top":"0","bottom":"0"}}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"left"}} -->
+<div class="wp-block-group" style="margin-top:0;margin-bottom:0"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|50"}},"layout":{"type":"flex","orientation":"vertical"}} -->
+<div class="wp-block-group"><!-- wp:site-title {"level":0,"style":{"typography":{"fontStyle":"normal","fontWeight":"600"}},"fontSize":"medium"} /-->
 
-<!-- wp:group {"style":{"spacing":{"blockGap":"48px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
-<div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"lineHeight":"0.8"}},"fontSize":"xx-large","fontFamily":"rozha-one"} -->
-<p class="has-rozha-one-font-family has-xx-large-font-size" style="line-height:0.8">Food <br>for thoughts</p>
-<!-- /wp:paragraph -->
+<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|30"}},"layout":{"type":"flex","orientation":"vertical"}} -->
+<div class="wp-block-group"><!-- wp:heading {"level":1,"fontSize":"xx-large"} -->
+<h1 class="wp-block-heading has-xx-large-font-size">Food <br>for thoughts</h1>
+<!-- /wp:heading -->
 
-<!-- wp:paragraph {"style":{"typography":{"lineHeight":"1.5"}},"fontSize":"medium"} -->
-<p class="has-medium-font-size" style="line-height:1.5">A collection of valuable thoughts by a very egocentric person.</p>
-<!-- /wp:paragraph --></div>
+<!-- wp:site-tagline {"style":{"typography":{"lineHeight":"1.5"}},"fontSize":"medium"} /--></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->
 
@@ -28,6 +26,6 @@
 <!-- /wp:group --></div>
 <!-- /wp:group -->
 
-<!-- wp:spacer {"height":"50px"} -->
-<div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- wp:spacer {"height":"var:preset|spacing|30"} -->
+<div style="height:var(--wp--preset--spacing--30)" aria-hidden="true" class="wp-block-spacer"></div>
 <!-- /wp:spacer -->
