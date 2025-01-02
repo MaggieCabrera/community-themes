@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "$schema": "https://schemas.wp.org/wp/6.7/theme.json",
+    "title": "Starry",
+    "styles": {
+        "color": {
+            "background": "#1B1922",
+            "text": "#ffffff"
+        }
+    }
+}

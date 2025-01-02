@@ -1,0 +1,112 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.7/theme.json",
+	"settings": {
+		"appearanceTools": true,
+		"color": {
+			"palette": [
+				{
+					"color": "#1B1922",
+					"name": "Primary",
+					"slug": "primary-color"
+				},
+				{
+					"color": "#3E06E0",
+					"name": "Secondary",
+					"slug": "secondary-color"
+				}
+			]
+		},
+		"layout": {
+			"contentSize": "1300px",
+			"wideSize": "1500px"
+		},
+		"spacing": {
+			"units": [
+				"%",
+				"px",
+				"em",
+				"rem",
+				"vh",
+				"vw"
+			]
+		},
+		"typography": {
+			"fontFamilies": [
+				{
+					"fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif",
+					"name": "System Font",
+					"slug": "system-font"
+				},
+				{
+					"name": "Manrope",
+					"slug": "manrope",
+					"fontFamily": "Manrope, sans-serif",
+					"fontFace": [
+						{
+							"src": [
+								"file:./assets/fonts/manrope_normal_400.woff2"
+							],
+							"fontWeight": "400",
+							"fontStyle": "normal",
+							"fontFamily": "Manrope"
+						},
+						{
+							"src": [
+								"file:./assets/fonts/manrope_normal_500.woff2"
+							],
+							"fontWeight": "500",
+							"fontStyle": "normal",
+							"fontFamily": "Manrope"
+						},
+						{
+							"src": [
+								"file:./assets/fonts/manrope_normal_600.woff2"
+							],
+							"fontWeight": "600",
+							"fontStyle": "normal",
+							"fontFamily": "Manrope"
+						},
+						{
+							"src": [
+								"file:./assets/fonts/manrope_normal_700.woff2"
+							],
+							"fontWeight": "700",
+							"fontStyle": "normal",
+							"fontFamily": "Manrope"
+						}
+					]
+				}
+			]
+		},
+		"useRootPaddingAwareAlignments": true
+	},
+	"styles": {
+		"color": {
+			"background": "#E5E5F3",
+			"text": "#000000"
+		},
+		"elements": {
+			"h1": {
+				"typography": {
+					"fontStyle": "normal",
+					"fontWeight": "400",
+					"lineHeight": "1"
+				}
+			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--manrope)"
+		}
+	},
+	"templateParts": [
+		{
+			"area": "header",
+			"name": "header"
+		},
+		{
+			"area": "footer",
+			"name": "footer"
+		}
+	],
+	"version": 3
+}
