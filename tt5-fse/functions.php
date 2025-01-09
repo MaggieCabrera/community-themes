@@ -2,7 +2,7 @@
 /**
  * Enqueue style.css file.
  */
-if ( ! function_exists( 'blue_note_styles' ) ) :
+if ( ! function_exists( 'tt5_styles' ) ) :
 
 	/**
 	 * Enqueue styles.
@@ -27,3 +27,4 @@ if ( ! function_exists( 'blue_note_styles' ) ) :
 endif;
 
 add_action( 'wp_enqueue_scripts', 'tt5_styles' );
+add_action( 'enqueue_block_editor_assets', 'tt5_styles' );
