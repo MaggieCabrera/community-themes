@@ -119,6 +119,10 @@
 <div class="wp-block-button has-custom-font-size is-style-outline has-x-small-font-size" style="font-style:normal;font-weight:500"><a class="wp-block-button__link has-secondary-color-color has-text-color has-link-color wp-element-button" href="/blog" style="padding-right:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--70)">View All Works</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
-<!-- /wp:query --></div>
+<!-- /wp:query -->
+<!-- wp:spacer {"height":"30px"} -->
+<div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
+</div>
 <!-- /wp:group --></main>
 <!-- /wp:group -->

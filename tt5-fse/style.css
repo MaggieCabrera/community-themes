@@ -13,3 +13,88 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: tt5-fse
 Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, rtl-language-support, theme-options, threaded-comments, translation-ready, wide-blocks
 */
+
+body a {
+    transition: all 0.3s ease-in-out;
+}
+
+.heading-dot {
+    position: relative;
+    width: 100%;
+}
+
+.heading-dot:after {
+    content: "\2022";
+    font-size: 32px;
+    line-height: 1;
+    right: 0;
+    vertical-align: middle;
+    position: absolute;
+    color: var(--wp--preset--color--secondary);
+}
+
+/* Change the WordPress default css to a 782px media query */
+@media (min-width: 782px) {
+    .wp-block-navigation__responsive-container-open:not(.always-shown) {
+        display: none !important;
+    }
+
+    .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
+        display: block !important;
+        width: 100%;
+        position: relative;
+        z-index: auto;
+        background-color: inherit;
+    }
+
+    .wp-block-navigation__responsive-container .wp-block-navigation__responsive-container-content {
+        justify-content: center;
+    }
+}
+
+/* Remove the WordPress default for 600px */
+@media (min-width: 600px) {
+    .wp-block-navigation__responsive-container-open:not(.always-shown) {
+        display: flex;
+    }
+
+    .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
+        display: none;
+    }
+}
+
+/* Footer CSS */
+
+.p-links a {
+    color: var(--wp--preset--color--secondary);
+}
+
+.p-links a:hover {
+    color: var(--wp--preset--color--secondary);
+}
+
+.footer-clip {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.footer-clip p {
+    width: 100%;
+    font-weight: 600;
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll-left 12s linear infinite;
+}
+
+@keyframes scroll-left {
+    from {
+        transform: translateX(0);
+        /* Start at the initial position */
+    }
+
+    to {
+        transform: translateX(-100%);
+        /* Move left by one full container's width */
+    }
+}
