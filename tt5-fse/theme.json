@@ -91,26 +91,31 @@
 					"name": "Extra Small"
 				},
 				{
+					"fluid": true,
 					"slug": "small",
 					"size": "2rem",
 					"name": "Small"
 				},
 				{
+					"fluid": true,
 					"slug": "medium",
 					"size": "3rem",
 					"name": "Medium"
 				},
 				{
+					"fluid": true,
 					"slug": "large",
 					"size": "4.6875rem",
 					"name": "Large"
 				},
 				{
+					"fluid": true,
 					"slug": "x-large",
 					"size": "7.5rem",
 					"name": "Extra Large"
 				},
 				{
+					"fluid": true,
 					"slug": "xx-large",
 					"size": "11.25rem",
 					"name": "Extra Extra Large"
@@ -172,6 +177,11 @@
 						}
 					}
 				}
+			},
+			"core/query-pagination-numbers": {
+				"typography": {
+					"letterSpacing": "5px"
+				}
 			}
 		},
 		"color": {
@@ -208,7 +218,7 @@
 					"fontStyle": "normal",
 					"fontWeight": "700",
 					"lineHeight": "1.15",
-					"letterSpacing": "-3px"
+					"letterSpacing": "-2px"
 				}
 			},
 			"h4": {
@@ -217,7 +227,7 @@
 					"fontStyle": "normal",
 					"fontWeight": "700",
 					"lineHeight": "1.15",
-					"letterSpacing": "-3px"
+					"letterSpacing": "-2px"
 				}
 			},
 			"h5": {
