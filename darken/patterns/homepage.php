@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Homepage
- * Slug: tt5-fse/homepage
+ * Slug: darken/homepage
  * Categories: Banners, Posts
  */
 ?>
@@ -100,7 +100,7 @@
 <h2 class="wp-block-heading">Works</h2>
 <!-- /wp:heading -->
 
-<!-- wp:pattern {"slug":"tt5-fse/blog-post"} /-->
+<!-- wp:pattern {"slug":"darken/blog-post"} /-->
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons"><!-- wp:button {"textColor":"secondary-color","className":"is-style-outline","style":{"spacing":{"padding":{"left":"var:preset|spacing|70","right":"var:preset|spacing|70"}},"elements":{"link":{"color":{"text":"var:preset|color|secondary-color"}}},"typography":{"fontStyle":"normal","fontWeight":"500"}},"fontSize":"x-small"} -->

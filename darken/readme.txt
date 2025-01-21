@@ -1,4 +1,4 @@
-== TT5 FSE ==
+== Darken ==
 
 Contributors: 
 Requires at least: 6.7
@@ -16,8 +16,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Copyright ==
 
-TT5 FSE WordPress Theme, (C) 2025 
-TT5 FSE is distributed under the terms of the GNU GPL.
+Darken WordPress Theme, (C) 2025 
+Darken is distributed under the terms of the GNU GPL.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: blog-post
- * Slug: tt5-fse/blog-post
+ * Slug: darken/blog-post
  * Categories: Posts
  */
 ?>
