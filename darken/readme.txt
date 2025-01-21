@@ -35,3 +35,10 @@ Manrope font
 License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
 Source: https://fonts.google.com/specimen/Manrope
 
+== Images License ==
+
+https://pxhere.com/en/photo/714525 [https://pxhere.com/en/license]
+https://pxhere.com/en/photo/764644 [https://pxhere.com/en/license]
+https://pxhere.com/en/photo/912909 [https://pxhere.com/en/license]
+https://pxhere.com/en/photo/209572 [https://pxhere.com/en/license]
+
