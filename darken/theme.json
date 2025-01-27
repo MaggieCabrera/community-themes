@@ -86,6 +86,7 @@
 			"customFontSize": true,
 			"fontSizes": [
 				{
+					"fluid": true,
 					"slug": "x-small",
 					"size": "1.5rem",
 					"name": "Extra Small"
@@ -264,8 +265,7 @@
 		"typography": {
 			"fontFamily": "var(--wp--preset--font-family--manrope)",
 			"fontSize": "1rem"
-		},
-		"css": ".heading-dot {\n    position: relative;\nwidth: 100%;\n}\n\n.heading-dot:after {\n    content: \"\\2022\";\n    font-size: 32px;\n    line-height: 1;\n    right: 0;\n    vertical-align: middle;\n    position: absolute;\ncolor: var(--wp--preset--color--secondary);\n}"
+		}
 	},
 	"templateParts": [
 		{
