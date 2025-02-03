@@ -1,11 +1,14 @@
 == Darken ==
 
-Contributors: 
-Requires at least: 6.7
+Contributors: wordpressdotorg
+Requires at least: 6.2
 Tested up to: 6.7
 Requires PHP: 5.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+
+== Description ==
 
 
 == Changelog ==
@@ -16,7 +19,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Copyright ==
 
-Darken WordPress Theme, (C) 2025 
+Darken WordPress Theme, (C) 2025 the WordPress team
 Darken is distributed under the terms of the GNU GPL.
 
 This program is free software: you can redistribute it and/or modify

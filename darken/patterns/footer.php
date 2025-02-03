@@ -26,7 +26,7 @@
 <!-- /wp:group -->
 
 <!-- wp:group {"style":{"spacing":{"padding":{"right":"var:preset|spacing|20","left":"var:preset|spacing|20","top":"var:preset|spacing|70","bottom":"var:preset|spacing|60"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--70);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--60);padding-left:var(--wp--preset--spacing--20)"><!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
+<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--70);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--60);padding-left:var(--wp--preset--spacing--20)"><!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"600","textDecoration":"underline"}},"fontSize":"small"} -->
 <p class="has-small-font-size" style="font-style:normal;font-weight:600;text-decoration:underline"><a href="mailto:info@example.com"><?php esc_html_e('info@example.com','darken'); ?></a></p>
 <!-- /wp:paragraph -->
@@ -45,8 +45,8 @@
 <p><?php esc_html_e('© Copyright 2025.','darken'); ?></p>
 <!-- /wp:paragraph -->
 
-<!-- wp:paragraph {"align":"center","className":"p-links"} -->
-<<p class="has-text-align-center p-links"><?php /* Translators: 1. is the start of a 'a' HTML element, 2. is the end of a 'a' HTML element */ 
+<!-- wp:paragraph {"align":"left","className":"p-links"} -->
+<p class="has-text-align-left p-links"><?php /* Translators: 1. is the start of a 'a' HTML element, 2. is the end of a 'a' HTML element */ 
 echo sprintf( esc_html__( 'Proudly Powered by %1$sWordPress%2$s', 'darken' ), '<a href="' . esc_url( 'https://wordpress.org' ) . '" rel="nofollow">', '</a>' ); ?> <?php esc_html_e('Designed by Community.','darken'); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>

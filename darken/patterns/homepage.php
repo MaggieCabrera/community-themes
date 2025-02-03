@@ -22,11 +22,12 @@
 <h5 class="wp-block-heading" style="font-size:32px"><?php esc_html_e('Hi , I am','darken'); ?></h5>
 <!-- /wp:heading -->
 
-<!-- wp:heading {"level":1} -->
-<h1 class="wp-block-heading"><?php esc_html_e('Digital Designer','darken'); ?><br>&amp;<?php esc_html_e(' Developer.','darken'); ?></h1>
+<!-- wp:heading {"level":1,"align":"full","style":{"spacing":{"margin":{"left":"-10px"}}}} -->
+<h1 class="wp-block-heading alignfull" style="margin-left:-10px"><?php esc_html_e('Digital Designer ','darken'); ?><br>&amp; <?php esc_html_e('Developer.','darken'); ?></h1>
 <!-- /wp:heading --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->
+
 
 <!-- wp:group {"style":{"spacing":{"padding":{"right":"var:preset|spacing|20","left":"var:preset|spacing|20"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group" style="padding-right:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--20)"><!-- wp:columns -->
